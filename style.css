@@ -1,4 +1,4 @@
-﻿/* ZÁKLADNÍ NASTAVENÍ A POZADÍ */
+/* ZÁKLADNÍ NASTAVENÍ A POZADÍ */
 body,
 #bg {
   margin: 0;
@@ -38,6 +38,7 @@ body {
   font-weight: 500;
   margin-bottom: 30px;
   color: #ffffff;
+  font-family: "Questrial", sans-serif;
 }
 
 .layers-list {
@@ -245,9 +246,9 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
   flex-direction: column;
 }
-
 /* TYPOGRAFIE */
 .velky-nadpis {
   font-size: 160px;
@@ -299,10 +300,12 @@ body {
 
 /* KOMPONENTY (Boxíky, ikonky atd.) */
 .svgsipka {
-  height: 70px;
-  width: 70px;
-  margin-top: 100px;
   transition: transform 0.3s ease-in-out;
+    display: block;
+  width: 70px;
+  height: 70px;
+  margin: 100px auto 0;
+
 }
 
 .svgsipka:hover {
@@ -406,7 +409,7 @@ summary::-webkit-details-marker {
 details {
   color: #ffffff;
   font-family: "Questrial", sans-serif;
-  font-size: 25px;
+  font-size: 20px;
   width: auto;
 }
 
@@ -481,10 +484,24 @@ details {
   #podmenu {
     display: none !important;
   }
+  
+.pozice-nadpisu > a{
+  max-width: 100vh;
+  width: 90%;
+  margin: 0 auto;
+  justify-content:  flex-start;
+  align-items: flex-start;
+  padding-left: 10px;
+  margin-right: 30px;
+}
 
   .velky-nadpis {
     font-size: 70px;
-    word-break: break-all;
+    width: 100%;
+  }
+
+  .velky-nadpis span {
+    display: inline; /* Každé slovo na nový řádek */
   }
   .maly-nadpis {
     font-size: 35px;
@@ -530,6 +547,16 @@ details {
     max-width: 250px;
     margin-top: 30px;
   }
+  
+  .vlozkabox-obr {
+  backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+  border-radius: 15px;
+  width: fit-content;
+  padding: 1px;
+  box-sizing: border-box;
+}
 
   /* OPRAVY PRO "KOKOT" SLIDE S VLOŽKOU */
   .kokot {
