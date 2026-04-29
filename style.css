@@ -467,6 +467,108 @@ details {
   pointer-events: none;
 }
 
+.bar {
+  width: 70%;
+  background-color: rgba(255, 255, 255, 0.4);
+  height: 20px;
+  border-radius: 30px;
+  margin-top: 5%;
+}
+
+.progress {
+  width: 0%;
+  background-color: rgba(207, 36, 36, 0.4);
+  height: 20px;
+  border-radius: 30px;
+}
+
+.progress.animate {
+  animation: progressAnim 2s ease-out forwards;
+}
+
+.progress2 {
+  width: 0%;
+  background-color: rgba(233, 196, 32, 0.4);
+  height: 20px;
+  border-radius: 30px;
+}
+
+.progress2.animate2 {
+  animation: progress2Anim 2s ease-out forwards;
+}
+
+.progress3 {
+  width: 0%;
+  background-color: rgba(106, 233, 32, 0.4);
+  height: 20px;
+  border-radius: 30px;
+}
+
+.progress3.animate3 {
+  animation: progress3Anim 2s ease-out forwards;
+}
+
+.progress4 {
+  width: 0%;
+  background-color: rgba(32, 153, 233, 0.4);
+  height: 20px;
+  border-radius: 30px;
+}
+
+.progress4.animate4 {
+  animation: progress4Anim 2s ease-out forwards;
+}
+
+@keyframes progressAnim {
+  from {
+    width: 0;
+  }
+  to {
+    width: 70%;
+  }
+}
+
+@keyframes progress2Anim {
+  from {
+    width: 0;
+  }
+  to {
+    width: 80%;
+  }
+}
+
+@keyframes progress3Anim {
+  from {
+    width: 0;
+  }
+  to {
+    width: 95%;
+  }
+}
+
+@keyframes progress4Anim {
+  from {
+    width: 0;
+  }
+  to {
+    width: 7%;
+  }
+}
+
+.ohraniceni {
+  border-top: 2px white solid;
+}
+
+footer {
+  margin-top: 50px;
+  color: white;
+  font-family: "Questrial", sans-serif;
+  height: 15vh;
+  text-align: center;
+  padding: 10px;
+  line-height: 1.5;
+}
+
 /* ========================================= */
 /* MOBILNÍ VERZE (Sjednoceno pod jedno pravidlo) */
 /* ========================================= */
