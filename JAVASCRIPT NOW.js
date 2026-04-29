@@ -25,3 +25,34 @@ document.addEventListener("click", (e) => {
 mobileMenuContainer.addEventListener("click", (e) => {
   e.stopPropagation();
 });
+
+// 5. Animace progress baru když je viditelný
+const progressBars = document.querySelectorAll(
+  ".progress, .progress2, .progress3, .progress4",
+);
+
+const observerOptions = {
+  threshold: 0.5, // Spustí se, když je 50% prvku viditelné
+};
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      if (entry.target.classList.contains("progress")) {
+        entry.target.classList.add("animate");
+      } else if (entry.target.classList.contains("progress2")) {
+        entry.target.classList.add("animate2");
+      } else if (entry.target.classList.contains("progress3")) {
+        entry.target.classList.add("animate3");
+      } else if (entry.target.classList.contains("progress4")) {
+        entry.target.classList.add("animate4");
+      }
+
+      observer.unobserve(entry.target); // Přestane observovat po prvním spuštění
+    }
+  });
+}, observerOptions);
+
+progressBars.forEach((bar) => {
+  observer.observe(bar);
+});
