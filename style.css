@@ -188,6 +188,14 @@ body {
   cursor: pointer;
   font-family: "Questrial", sans-serif;
   margin: 20px;
+  transition:
+    0.3s background-color,
+    0.3s color;
+}
+
+.produkt:hover {
+  background-color: white;
+  color: #000;
 }
 
 .pilulka {
@@ -195,6 +203,14 @@ body {
   display: block;
   margin: 10px auto;
   text-align: center;
+  transition:
+    0.3s background-color,
+    0.3s color;
+}
+
+.pilulka:hover {
+  background-color: white;
+  color: #000;
 }
 
 .horni-lista {
@@ -394,6 +410,14 @@ summary {
   border-radius: 999px;
   cursor: pointer;
   list-style: none;
+  transition:
+    background-color 0.4s,
+    color 0.3s;
+}
+
+summary:hover {
+  background-color: white;
+  color: #000;
 }
 
 /* Skrytý text se rozprostře přirozeně */
