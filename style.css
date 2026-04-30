@@ -3,7 +3,7 @@ body,
 #bg {
   margin: 0;
   height: 100%;
-  background: linear-gradient(135deg, #495686, #0b0f16);
+  background: linear-gradient(95deg, #1c2541, #3a506b);
   transition: background 0.2s;
 }
 
@@ -353,7 +353,7 @@ body {
 h3 {
   font-size: 26px;
   margin: 0 0 15px 0;
-  color: #ffffff;
+  color: #fdfcdc;
   font-family: "Questrial", sans-serif;
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
   padding-bottom: 10px;
@@ -518,6 +518,21 @@ details {
   animation: progress4Anim 2s ease-out forwards;
 }
 
+.zvyrazneni {
+  background: linear-gradient(90deg, #66a1f3, #22c9a6);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.popisek {
+  font-size: medium;
+  opacity: 0.8;
+  color: #8aa1b1;
+  font-family: "Questrial", sans-serif;
+  margin-top: 5px;
+}
+
 @keyframes progressAnim {
   from {
     width: 0;
@@ -567,6 +582,7 @@ footer {
   text-align: center;
   padding: 10px;
   line-height: 1.5;
+  opacity: 0.7;
 }
 
 /* ========================================= */
@@ -656,7 +672,7 @@ footer {
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
     border-radius: 15px;
     width: fit-content;
-    padding: 1px;
+    padding: 15px;
     box-sizing: border-box;
   }
 
