@@ -3,7 +3,7 @@ body,
 #bg {
   margin: 0;
   min-height: 100vh;
-  background: linear-gradient(135deg, #495686, #0b0f16);
+  background: linear-gradient(95deg, #1c2541, #3a506b);
   font-family: "Questrial", sans-serif;
   color: white;
 }
@@ -15,6 +15,137 @@ body,
   top: 12px;
   left: 12px;
   z-index: 1000;
+}
+
+.home-link {
+  position: fixed;
+  top: 12px;
+  left: 12px;
+  z-index: 1001;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 16px;
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease;
+}
+
+.home-link:hover {
+  transform: scale(1.05);
+  background: rgba(255, 255, 255, 0.16);
+}
+
+.produkt:hover {
+  background-color: white;
+  color: #000;
+}
+
+.team:hover {
+  background-color: white;
+  color: #000;
+}
+
+.pilulka:hover {
+  background-color: white;
+  color: #000;
+}
+
+.home-link svg {
+  width: 28px;
+  height: 28px;
+  fill: #ffffff;
+}
+
+.kont {
+  min-height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 80px 24px 40px;
+  box-sizing: border-box;
+}
+
+.product-container {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 24px;
+  font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.75;
+  color: #ffffff;
+}
+
+.ohraniceni {
+  border-top: 2px white solid;
+  opacity: 0.7;
+}
+
+footer {
+  margin-top: 50px;
+  color: white;
+  font-family: "Questrial", sans-serif;
+  height: 15vh;
+  text-align: center;
+  padding: 10px;
+  line-height: 1.5;
+  opacity: 0.7;
+}
+
+.p-intro {
+  font-size: 22px;
+  font-weight: 500;
+  margin-bottom: 30px;
+  color: #ffffff;
+  font-family: "Questrial", sans-serif;
+}
+
+.p-text2 {
+  font-size: 20px;
+  color: #e6f3ff;
+  margin-bottom: 24px;
+  line-height: 1.8;
+}
+
+.zvyrazneni {
+  background: linear-gradient(90deg, #66a1f3, #22c9a6);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.layers-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.layers-list li {
+  margin-bottom: 12px;
+  padding: 15px 20px;
+  border-left: 5px solid #66a1f3;
+  border-radius: 4px;
+  font-size: 18px;
+  transition: transform 0.2s ease;
+  backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+}
+
+.layers-list li:hover {
+  transform: translateX(10px);
+  box-shadow: 0 8px 30px rgba(253, 249, 249, 0.25);
+}
+
+.layers-list strong {
+  color: #66a1f3;
+  display: block;
+  margin-bottom: 5px;
 }
 
 #logo-svg {
@@ -132,6 +263,101 @@ body,
   border: 1px solid rgba(255, 255, 255, 0.2);
   margin: 5px;
   border-radius: 50px;
+}
+
+.product-highlight {
+  margin: 25px 0;
+  padding: 24px 28px;
+  border-radius: 18px;
+  background: rgba(188, 164, 255, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  color: #f4efff;
+  font-size: 20px;
+  line-height: 1.6;
+}
+
+.section-title {
+  margin-top: 40px;
+  margin-bottom: 15px;
+  font-size: 32px;
+  color: #f3f1ff;
+}
+
+.feature-cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 20px;
+}
+
+.feature-card {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 18px;
+  padding: 24px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+}
+
+.feature-card h3 {
+  margin: 0 0 12px;
+  color: #66a1f3;
+}
+
+.feature-card p {
+  margin: 0;
+  color: #e6f3ff;
+}
+
+.kontakt-box {
+  max-width: 760px;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 24px;
+  padding: 42px;
+  box-shadow: 0 28px 70px rgba(0, 0, 0, 0.22);
+  text-align: center;
+}
+
+.contact-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 28px;
+}
+
+.contact-table th,
+.contact-table td {
+  padding: 18px 20px;
+}
+
+.contact-table th {
+  background: rgba(188, 164, 255, 0.25);
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.contact-table tr:nth-child(even) {
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.contact-table tr:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.contact-table td {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  color: #f7f3ff;
+}
+
+.contact-table a {
+  text-decoration: none;
+}
+
+@media (max-width: 900px) {
+  .feature-cards {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* --- TYPOGRAFIE --- */
