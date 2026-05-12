@@ -97,6 +97,28 @@ footer {
   opacity: 0.7;
 }
 
+.contact-page {
+  min-height: calc(100vh - 15vh);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 110px 24px 40px;
+  box-sizing: border-box;
+}
+
+.wrap-nadpsis {
+  min-height: calc(100vh - 15vh);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 110px 24px 40px;
+  box-sizing: border-box;
+}
+
+.contact-wrap {
+  width: min(760px, 100%);
+}
+
 .p-intro {
   font-size: 22px;
   font-weight: 500;
@@ -183,7 +205,7 @@ footer {
   top: 10px;
   width: 100%;
   text-align: center;
-  z-index: 100;
+  z-index: 3000;
 }
 
 #menu {
@@ -213,7 +235,9 @@ footer {
   height: 56px;
   padding: 0 16px;
   display: none;
-  z-index: 1001;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 3001;
 }
 
 .hamburger {
@@ -230,39 +254,67 @@ footer {
 .hamburger span {
   height: 3px;
   width: 100%;
-  background: white;
+  background: #ffffff;
   border-radius: 2px;
   transition: 0.3s;
+}
+
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translateY(14.5px);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translateY(-15.5px);
 }
 
 .mobile-menu {
   position: fixed;
   top: 56px;
   right: 20px;
-  width: 55%;
+  z-index: 3000;
+  height: 30%;
+  width: 45%;
   display: flex;
   flex-direction: column;
-  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-130%);
+  justify-content: center;
   backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
   border-radius: 15px;
-  transform: translateY(-150%);
   opacity: 0;
-  transition: 0.5s;
+  pointer-events: none;
+  transition:
+    transform 0.5s ease,
+    opacity 0.5s ease;
 }
 
 .mobile-menu.open {
   transform: translateY(0);
   opacity: 1;
+  pointer-events: auto;
 }
 
 .pilulka {
   color: white;
   text-decoration: none;
-  padding: 15px;
+  font-size: 18px;
+  border: 2px solid white;
+  padding: 8px 20px;
+  border-radius: 999px;
+  width: fit-content;
+  display: block;
+  margin: 10px auto;
   text-align: center;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  margin: 5px;
-  border-radius: 50px;
+  cursor: pointer;
+  font-family: "Questrial", sans-serif;
+  transition:
+    0.3s background-color,
+    0.3s color;
 }
 
 .product-highlight {
@@ -311,6 +363,7 @@ footer {
 .kontakt-box {
   max-width: 760px;
   width: 100%;
+  margin: 0 auto;
   background: rgba(255, 255, 255, 0.08);
   border: 1px solid rgba(255, 255, 255, 0.14);
   border-radius: 24px;
@@ -325,33 +378,27 @@ footer {
   margin-top: 28px;
 }
 
-.contact-table th,
-.contact-table td {
-  padding: 18px 20px;
+.text-field {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 8px;
+  padding: 12px 16px;
+  margin-bottom: 15px;
+  margin-top: 0%;
 }
 
-.contact-table th {
-  background: rgba(188, 164, 255, 0.25);
-  color: #ffffff;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-}
-
-.contact-table tr:nth-child(even) {
-  background: rgba(255, 255, 255, 0.06);
-}
-
-.contact-table tr:hover {
-  background: rgba(255, 255, 255, 0.12);
-}
-
-.contact-table td {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
-  color: #f7f3ff;
-}
-
-.contact-table a {
-  text-decoration: none;
+.push-button {
+  border: 2px solid white;
+  border-radius: 999px;
+  background-color: transparent;
+  color: white;
+  height: 30px;
+  width: auto;
+  margin-top: 20px;
+  padding: 0 20px;
+  font-size: 16px;
+  cursor: pointer;
+  font-family: Questrial, sans-serif;
 }
 
 @media (max-width: 900px) {

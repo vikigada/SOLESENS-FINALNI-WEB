@@ -1,6 +1,22 @@
 // 1. Oprava názvu (zkontroluj, že v HTML máš id="hamburger")
 const hamburgerBtn = document.getElementById("hamburger");
 const mobileMenuContainer = document.getElementById("mobileMenu");
+const navBars = document.querySelectorAll(".horni-lista");
+const firstTitle = document.querySelector(".velky-nadpis");
+
+function updateNavBlur() {
+  if (!firstTitle || navBars.length === 0) return;
+
+  const titleBottom = firstTitle.getBoundingClientRect().bottom;
+  const shouldBlur = titleBottom <= 70;
+
+  navBars.forEach((nav) => {
+    nav.classList.toggle("nav-scrolled", shouldBlur);
+  });
+}
+
+updateNavBlur();
+window.addEventListener("scroll", updateNavBlur, { passive: true });
 
 // 2. Jeden čistý event pro kliknutí na tlačítko
 if (hamburgerBtn && mobileMenuContainer) {

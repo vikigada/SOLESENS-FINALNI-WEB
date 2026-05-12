@@ -2,7 +2,7 @@
 body,
 #bg {
   margin: 0;
-  height: 100%;
+  min-height: 100vh;
   background: linear-gradient(95deg, #1c2541, #3a506b);
   transition: background 0.2s;
 }
@@ -119,7 +119,7 @@ body {
   padding: 18px 20px;
 }
 
-.contact-table th {
+.contact-table {
   background: rgba(102, 161, 243, 0.25);
   color: #ffffff;
   text-transform: uppercase;
@@ -353,8 +353,19 @@ body {
   font-family: "Questrial", sans-serif;
   transition:
     opacity 0.4s ease,
-    transform 0.4s ease;
+    transform 0.4s ease,
+    background 0.3s ease,
+    backdrop-filter 0.3s ease;
   z-index: 100;
+  top: 0;
+  padding: 15px 0;
+  background: transparent;
+}
+
+.horni-lista.nav-scrolled {
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
 }
 
 #menu,
@@ -791,8 +802,15 @@ footer {
   .horni-lista {
     top: 0;
     padding: 15px 0;
+    background: transparent;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+  }
+
+  .horni-lista.nav-scrolled {
     background: rgba(0, 0, 0, 0.3);
     backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
   }
 
   /* TADY JSOU OPRAVY PRO BOXY NA MOBILU */

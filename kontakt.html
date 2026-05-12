@@ -27,39 +27,72 @@
           <a href="kontakt.html" class="produkt">Kontakt</a>
         </div>
       </nav>
+
+      <div style="display: flex; justify-content: flex-end">
+        <header class="navbar">
+          <button class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </header>
+
+        <nav
+          class="mobile-menu"
+          id="mobileMenu"
+          style="display: flex; margin-bottom: 20px"
+        >
+          <a href="o-nas.html" class="pilulka">O nás</a>
+
+          <a href="produkt.html" class="pilulka">Produkt</a>
+
+          <a href="Sole Sens team.html" class="pilulka"> Team </a>
+
+          <a href="kontakt.html" class="pilulka">Kontakt</a>
+        </nav>
+      </div>
     </header>
 
-    <article>
-      <div class="kont">
-        <h1 class="nadpis">Kontakt</h1>
-        <div class="kontakt-box">
-          <p class="p-intro">
-            Napište nám a my vám pomůžeme zjistit víc o SoleSens, testování nebo
-            spolupráci.
-          </p>
-          <table class="contact-table">
-            <tr>
-              <th>Typ</th>
-              <th>Informace</th>
-            </tr>
-            <tr>
-              <td>Email</td>
-              <td>
-                <a href="mailto:vikigda@seznam.cz" class="zvyrazneni"
-                  >vikigda@seznam.cz</a
-                >
-              </td>
-            </tr>
-            <tr>
-              <td>Adresa</td>
-              <td>InovaSole, Ostrava, Česká republika</td>
-            </tr>
-            <tr>
-              <td>Telefon</td>
-              <td>+420 602 213 075</td>
-            </tr>
-          </table>
-        </div>
+    <article class="contact-page">
+      <div class="contact-wrap">
+        <h1 class="nadpis">Kontaktujet nás:</h1>
+        <form
+          action="https://formsubmit.co/contact@inovasole.com"
+          method="POST"
+          class="kont kontakt-box"
+        >
+          <!-- Pole pro jméno -->
+          <label for="name" class="p-intro">Jméno:</label>
+          <input
+            type="text"
+            name="name"
+            id="name"
+            class="text-field"
+            required
+          />
+
+          <!-- Pole pro e-mail odesílatele -->
+          <label for="email" class="p-intro">Váš E-mail:</label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            class="text-field"
+            required
+          />
+
+          <!-- Pole pro zprávu -->
+          <label for="message" class="p-intro">Zpráva:</label>
+          <textarea
+            name="message"
+            id="message"
+            class="text-field"
+            required
+          ></textarea>
+
+          <!-- Tlačítko pro odeslání -->
+          <button type="submit" class="push-button">Odeslat zprávu</button>
+        </form>
       </div>
     </article>
 
@@ -69,9 +102,9 @@
           <strong>Adresa: </strong> InovaSole, Ostrava, Česká republika <br />
           <strong>Kontakt: </strong>
           <a
-            href="mailto:vikigda@seznam.cz"
+            href="mailto:contact@inovasole.com"
             style="text-decoration: none; color: inherit"
-            >vikigda@seznam.cz</a
+            >contact@inovasole.com</a
           >
           <br />
         </p>
@@ -83,5 +116,7 @@
         </div>
       </div>
     </footer>
+
+    <script src="JAVASCRIPT NOW.js"></script>
   </body>
 </html>
