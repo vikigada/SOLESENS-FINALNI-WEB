@@ -12,7 +12,10 @@ html {
 }
 
 body {
-  overflow-x: hidden; /* Zabrání vodorovnému posuvníku, když něco přeteče */
+  scroll-behavior: smooth;
+  width: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 /* NAVIGACE A MENU */
@@ -41,6 +44,29 @@ body {
   transition:
     transform 0.2s ease,
     background 0.2s ease;
+}
+
+.nav-odkaz-domu {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  border: 2px solid white;
+  padding: 8px 20px;
+  border-radius: 999px;
+  transition: background-color 0.3s, color 0.3s;
+  cursor: pointer;
+  font-family: "Questrial", sans-serif;
+  margin: 20px;
+  transition: 0.3s background-color, 0.3s color;
+}
+.nav-odkaz-domu:hover {
+  background-color: white;
+  color: #000;
+}
+
+.active {
+  background-color: white;
+  color: #000;
 }
 
 .home-link:hover {
@@ -762,6 +788,8 @@ footer {
 
   .navbar {
     display: flex;
+    position: fixed;
+    top: 0;
   }
   #menu,
   #podmenu {
@@ -811,6 +839,7 @@ footer {
     background: rgba(0, 0, 0, 0.3);
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
+    height: 25px;
   }
 
   /* TADY JSOU OPRAVY PRO BOXY NA MOBILU */
