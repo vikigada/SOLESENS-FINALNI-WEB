@@ -8,7 +8,7 @@ function updateNavBlur() {
   if (!firstTitle || navBars.length === 0) return;
 
   const titleBottom = firstTitle.getBoundingClientRect().bottom;
-  const shouldBlur = titleBottom <= 350;
+  const shouldBlur = titleBottom <= 220;
 
   navBars.forEach((nav) => {
     nav.classList.toggle("nav-scrolled", shouldBlur);
