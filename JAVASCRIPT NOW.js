@@ -72,3 +72,17 @@ const observer = new IntersectionObserver((entries) => {
 progressBars.forEach((bar) => {
   observer.observe(bar);
 });
+
+const darkModeQuery = window.matchMedia('(prefers-color-scheme: dark)');
+
+function updateFavicon() {
+  // Hledá konkrétně SVG ikonu, aby omylem neaktualizoval PNG zálohu
+  const favicon = document.querySelector('link[type="image/svg+xml"]');
+  
+  if (!favicon) return; 
+  
+  const baseUrl = favicon.href.split('?')[0];
+  favicon.href = `${baseUrl}?t=${Date.now()}`;
+}
+
+darkModeQuery.addEventListener('change', updateFavicon);
