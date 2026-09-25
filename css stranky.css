@@ -2,10 +2,13 @@
 body,
 #bg {
   margin: 0;
-  min-height: 100vh;
   background: linear-gradient(95deg, #1c2541, #3a506b);
   font-family: "Questrial", sans-serif;
   color: white;
+
+  width: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 /* --- LOGO A ANIMACE --- */
@@ -258,6 +261,8 @@ footer {
   flex-direction: column;
   justify-content: space-between;
   cursor: pointer;
+  position: fixed;
+  right: 20px;
 }
 
 .hamburger span {
@@ -280,16 +285,14 @@ footer {
   transform: rotate(-45deg) translateY(-15.5px);
 }
 
-.mobile-menu {
-  position: fixed;
-  top: 56px;
-  right: 20px;
-  z-index: 3000;
-  height: 35%;
-  width: 45%;
+.mobilni-menu {
   display: flex;
-  flex-direction: column;
-  transform: translateY(-130%);
+  position: fixed;
+  right: 10px;
+  top: 48px;
+  padding: 15px 20px;
+  transform: translateX(110%);
+  align-items: center;
   justify-content: center;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
@@ -297,15 +300,45 @@ footer {
   border-radius: 15px;
   opacity: 0;
   pointer-events: none;
-  transition:
-    transform 0.5s ease,
-    opacity 0.5s ease;
+
+  transition: transform 0.2s ease-in-out, opacity 0.15s ease-in-out;
+}
+.mobilni-menu ul {
+  list-style: none;
 }
 
-.mobile-menu.open {
-  transform: translateY(0);
+.mobilni-menu.open {
+  transform: translateX(0);
   opacity: 1;
   pointer-events: auto;
+}
+
+.mobile-nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  border: 2px solid white;
+  padding: 6px 20px;
+  border-radius: 999px;
+  width: fit-content;
+  display: block;
+  margin: 6px auto;
+  text-align: center;
+  cursor: pointer;
+  font-family: "Questrial", sans-serif;
+  transition:
+    0.3s background-color,
+    0.3s color;
+}
+
+.mobile-nav a:hover {
+  background-color: white;
+  color: #000;
+}
+
+.nav-active {
+  background-color: white;
+  color: #000000 !important;
 }
 
 .pilulka {
@@ -313,11 +346,11 @@ footer {
   text-decoration: none;
   font-size: 18px;
   border: 2px solid white;
-  padding: 8px 20px;
+  padding: 6px 20px;
   border-radius: 999px;
   width: fit-content;
   display: block;
-  margin: 10px auto;
+  margin: 6px auto;
   text-align: center;
   cursor: pointer;
   font-family: "Questrial", sans-serif;
@@ -510,5 +543,157 @@ footer {
   }
   .logo {
     width: 45px;
+  }
+}
+
+
+/*  -----------------------------------------------------------------
+    team-cards nové  
+    ----------------------------------------------------------------*/
+
+.team-section {
+  width: 100%;
+  padding: 0;
+  margin: 80px 0 0;
+}
+
+.team-cards-around-div {
+  width: 80%;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  margin: 20px auto 40px;
+}
+
+.team-card {
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;
+  box-shadow: 0 28px 70px rgba(0, 0, 0, 0.22);
+  overflow: hidden;
+}
+
+.team-card-img {
+  width: 100%;
+  max-height: 350px;
+  overflow: hidden;
+}
+
+.team-card-img img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.team-card-about h2 {
+  font-size: 1.6rem;
+  margin: 20px 12px 6px;
+}
+
+.team-card-about h3 {
+  margin: 0 12px 18px;
+}
+
+.team-card-about p {
+  margin: 0 12px 18px;
+}
+
+@media (min-width: 445px) {
+  .team-cards-around-div {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .team-card-img {
+    height: 320px;
+    width: 100%;
+  }
+  .team-card-img img {
+    height: 100% !important;
+  }
+
+  .team-card.tobias h2, .team-card.viktor h2 {
+    white-space: nowrap;
+    margin-right: 5px;
+  }
+
+  .team-card.vojtech h2, .team-card.matous h2 {
+    white-space: nowrap;
+    margin-right: 4px;
+    max-width: none; /* Nad 550px šířku neomezujeme */
+  }
+
+  @media (max-width: 550px) {
+    .team-card.vojtech h2, .team-card.matous h2 {
+      white-space: normal; /* Povolí zalamování textu */
+      
+      /* Přiškrtí šířku nadpisu. 
+         Tím donutí i Matouše, aby jeho příjmení spadlo dolů a byli oba na dva řádky. */
+      max-width: 120px; 
+      display: inline-block;
+    }
+  }
+}
+
+
+
+@media (785px < width < 1050px) {
+
+  .team-cards-around-div {
+    width: 90%;
+  }
+
+  .team-card {
+    display: flex;
+    flex-direction: row;
+    max-height: 320px;
+  }
+
+  .team-card-about {
+    width: 50%;
+  }
+
+  .team-card-about p {
+    line-height: 1.1;
+  }
+
+  .team-card-img {
+    max-width: 50%;
+  }
+
+  .team-card.vojtech h2, .team-card.matous h2 {
+    display: block;
+    max-width: 100%;
+    white-space: normal;
+  }
+}
+
+@media (min-width: 1050px) {
+  .team-cards-around-div {
+    width: 90%;
+    max-width: 1100px;
+  }
+
+  .team-card {
+    display: flex;
+    flex-direction: row;
+    height: 350px;
+  }
+
+  .team-card-about {
+    width: 55%;
+  }
+  
+  .team-card-about p {
+    font-size: 1.1rem;
+    line-height: 1.2;
+  }
+
+.team-card-about h3 {
+  font-size: 1.3rem;
+  line-height: 1.2;
+}
+
+  .team-card-img {
+    max-width: 45%;
+    height: 100%;
   }
 }

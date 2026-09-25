@@ -32,26 +32,25 @@
 
       <div style="display: flex; justify-content: flex-end">
         <header class="navbar">
-          <button class="hamburger" id="hamburger">
+          <button class="hamburger" id="hamburger" aria-label="Otevřít navigaci">
             <span></span>
             <span></span>
             <span></span>
           </button>
         </header>
 
-        <nav
-          class="mobile-menu"
-          id="mobileMenu"
-          style="display: flex; margin-bottom: 20px"
-        >
-          <a href="o-nas.html" class="pilulka">O nás</a>
+        <nav class="mobilni-menu" role="navigation" aria-label="Hlavní navigace">
 
-          <a href="produkt.html" class="pilulka">Produkt</a>
+          <ul class="mobile-nav">
+            <li><a href="index.html">Domů</a></li>
+            <li><a href="o-nas.html" class="active">O nás</a></li>
+            <li><a href="produkt.html">Produkt</a></li>
+            <li><a href="Sole Sens team.html">Team</a></li>
+            <li><a href="kontakt.html" class="nav-active">kontakt</a></li>
+          </ul>
 
-          <a href="Sole Sens team.html" class="pilulka"> Team </a>
-
-          <a href="kontakt.html" class="pilulka">Kontakt</a>
         </nav>
+
       </div>
     </header>
 

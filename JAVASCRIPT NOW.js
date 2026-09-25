@@ -1,6 +1,6 @@
 // 1. Oprava názvu (zkontroluj, že v HTML máš id="hamburger")
 const hamburgerBtn = document.getElementById("hamburger");
-const mobileMenuContainer = document.getElementById("mobileMenu");
+const mobileMenuContainer = document.querySelector(".mobilni-menu");
 const navBars = document.querySelectorAll(".horni-lista");
 const firstTitle = document.querySelector(".velky-nadpis");
 
