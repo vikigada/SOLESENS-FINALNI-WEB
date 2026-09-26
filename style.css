@@ -11,9 +11,10 @@ html {
   scroll-behavior: smooth;
 }
 
-body {
+body, html {
   scroll-behavior: smooth;
-  width: 100%;
+  max-width: 100%;
+  overflow-x: clip;
   margin: 0;
   padding: 0;
 }
@@ -166,7 +167,6 @@ body {
 }
 
 .product-container {
-  max-width: 800px;
   margin: 40px auto;
   font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   line-height: 1.6;
@@ -295,7 +295,7 @@ body {
   position: fixed;
   right: 10px;
   top: 48px;
-  padding: 15px 20px;
+  padding: 15px 30px 15px 0;
   transform: translateX(110%);
   align-items: center;
   justify-content: center;
@@ -397,7 +397,7 @@ body {
   text-align: center;
   width: 100%;
   position: fixed;
-  top: 10px;
+  margin: 0;
   font-family: "Questrial", sans-serif;
   transition:
     opacity 0.4s ease,
@@ -796,6 +796,18 @@ footer {
   padding: 10px;
   line-height: 1.5;
   opacity: 0.7;
+}
+
+@media (max-width: 880px) {
+  .velky-nadpis {
+    font-size: 120px;
+  }
+}
+
+@media (max-width: 400px) {
+  .velky-nadpis {
+    white-space: normal;
+  }
 }
 
 /* ========================================= */
