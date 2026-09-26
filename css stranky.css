@@ -312,6 +312,7 @@ footer {
   pointer-events: none;
 
   transition: transform 0.2s ease-in-out, opacity 0.15s ease-in-out;
+  z-index: 3000;
 }
 .mobilni-menu ul {
   list-style: none;
